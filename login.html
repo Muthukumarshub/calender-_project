@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form </title>
+  <link rel="stylesheet" href="login.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper" id="signup" style="display:none;">
+    <form action="register.php" onsubmit="return isvalid()" method="POST">
+      <h1>Register Here !!!</h1>
+      <div class="input-box">
+        <input type="text" name="a" placeholder="Name" required>
+        <i class='bx bx-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="text" name="b" placeholder="Username" required>
+        <i class='bx bx-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="email"  name="c" placeholder="Email" required>
+        <i class='bx bxs-envelope' ></i>
+      </div>
+      <div class="input-box">
+        <input type="password" name="d" placeholder="Password" required>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember Me</label>
+        <a href="#"></a>
+      </div>
+      <input type="submit" value="Register" class="btn" />
+      <div class="register-link">
+        <p>Already have an account? <a href="#">SignIn</a></p>
+      </div>
+    </form>
+  </div>
+
+  <div class="wrapper" id="signIn">
+    <h1>Login !!!</h1>
+    <form action="login.php" method="POST">
+      <div class="input-box">
+        <input type="text"  name="b" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" name="d" placeholder="Password" required/>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      <input type="submit" value="Login" class="btn" />
+      <div class="register-link">
+        <p>Click Here for <a id="registerLink">New User</a></p>
+    </div>
+  </form>  
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
